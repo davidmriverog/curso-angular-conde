@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 6 - Manejo de formularios Created</title>
+  <link rel="stylesheet" href="styles.css" type="text/css" charset="utf-8">
+</head>
+<body ng-controller="myController">
+  <h1>Cuaderno de alumnos</h1>
+  <div class="wrapper">
+    <div class="contact-item" ng-repeat="alumno in alumnos | orderBy:'nombres' ">
+      <div class="nombre">
+        {{ alumno.nombres }} - {{ alumno.telefono }}
+      </div>
+      <span class="curso">{{ alumno.curso }}</span>
+    </div>
+  </div>
+  <hr />
+  <div class="wrapper">
+    <h2>Añadir contactos</h2>
+    Nombre: <input type="text" name="nombres" ng-model="form.nombres" value="">
+    Teléfono: <input type="text" name="telefono" ng-model="form.telefono" value="">
+    Curso: <input type="text" name="curso" ng-model="form.curso" value="">
+    <input type="button" name="enviar" ng-click="saved()" value="Registrar">
+  </div>
+  <!-- Libraries AngularJS -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  
+  <!-- Apps -->
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
