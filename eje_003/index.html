@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3 - Uso del repeat, push (Cuaderno de alumnos)</title>
+</head>
+<body ng-controller="myController">
+  <h1>Cuaderno de alumnos</h1>
+  <div ng-repeat="alumno in alumnos">
+    <div>
+      {{ alumno.nombres }} - {{ alumno.telefono }}
+    </div>
+    <span>{{ alumno.curso }}</span>
+  </div>
+  <!-- Libraries AngularJS -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  
+  <!-- Apps -->
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
