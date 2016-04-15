@@ -2,7 +2,7 @@
 <html lang="en" ng-app="myApp">
 <head>
   <meta charset="UTF-8">
-  <title>Ejercicio 9 - Manejo de GruntJS y depuracion del codigo. </title>
+  <title>Ejercicio 10 - Mezclar y reducir archivos .js con Grunt </title>
   <link rel="stylesheet" href="dist/css/styles.min.css" type="text/css" charset="utf-8">
 </head>
 <body ng-controller="myController">
@@ -28,14 +28,15 @@
     Nombre: <input type="text" name="nombres" ng-model="form.nombres" value="">
     Teléfono: <input type="text" name="telefono" ng-model="form.telefono" value="">
     Curso: <input type="text" name="curso" ng-model="form.curso" value="">
-    
+
     <button type="submit" name="addAlumno" ng-click="saved()">
        Registrar
     </button>
   </div>
+  
   <!-- Libraries AngularJS -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-  
+
   <!-- Apps -->
   <script type="text/javascript" src="dist/js/operations.min.js"></script>
 </body>

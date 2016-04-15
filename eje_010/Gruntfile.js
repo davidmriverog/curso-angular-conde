@@ -2,9 +2,19 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    uglify: {
+
+    concat: {
+      options: {
+        separator: ';',
+      },
       dist: {
-        src: 'src/js/*.js',
+        src: ['src/js/app.js', 'src/js/controllers.js'],
+        dest: 'dist/js/operations.js',
+      },
+    },
+    uglify:{
+      dist: {
+        src: 'dist/js/operations.js',
         dest: 'dist/js/operations.min.js'
       }
     },
@@ -25,8 +35,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify','cssmin']);
+  grunt.registerTask('default', ['concat','uglify','cssmin']);
 
 };
